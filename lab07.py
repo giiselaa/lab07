@@ -34,13 +34,19 @@ class Cohete:
         self.center_y += self.cambiar_y
         self.center_x += self.cambiar_x
 
+        if self.center_x > SCREEN_WIDTH:
+            self.cambiar_x *= -1
+
+        if self.center_y > SCREEN_HEIGHT:
+            self.cambiar_y *= -1
+
 
 class MyGame(arcade.Window):
 
     def __init__(self, width, height, title):
 
         super().__init__(width, height, title)
-        arcade.set_background_color(arcade.color.DARK_BLUE)
+        arcade.set_background_color(arcade.color.BLACK)
 
         self.cohete = Cohete(0, 0, 0.5, arcade.color.WHITE, arcade.color.RED, 3, 3)
 
