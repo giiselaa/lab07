@@ -42,7 +42,7 @@ class MyGame(arcade.Window):
         super().__init__(width, height, title)
         arcade.set_background_color(arcade.color.DARK_BLUE)
 
-        self.cohete = Cohete(0, 0, 1, arcade.color.WHITE, arcade.color.RED, 3, 3)
+        self.cohete = Cohete(0, 0, 0.5, arcade.color.WHITE, arcade.color.RED, 3, 3)
 
     def on_draw(self):
         arcade.start_render()
